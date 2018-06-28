@@ -30,4 +30,5 @@ module fancy_counter(
     wire dir;   // 1 means stepping forward, 0 means stepping back
     counter record( .clk(CLOCK), .en(ENABLE), .j(dir) );
     
+    reg [2:0] s;
 endmodule
