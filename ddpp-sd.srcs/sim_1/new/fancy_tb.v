@@ -24,7 +24,15 @@ module fancy_tb(
 
     );
     reg clk;
+    reg reset;
+    reg en;
+    wire back, done;
     
+    fancy_counter fancy(
+        .CLOCK(clk),
+        .RESET(reset)
+    );
+
     initial begin
         clk = 0;
     end
